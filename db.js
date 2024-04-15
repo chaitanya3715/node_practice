@@ -1,7 +1,9 @@
 const mongoose = require ('mongoose');
-
+require('dotenv').config();
 // define mongodb connection url
-const mongoURL= 'mongodb://localhost:27017/camdb'
+//xCbI7InWciDSxlJq :dbpass
+//const mongoURL= 'mongodb://localhost:27017/camdb'
+const mongoURL= process.env.MONGO_URL;
 
 //setup mongodb connection 
 mongoose.connect(mongoURL

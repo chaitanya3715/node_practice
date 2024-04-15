@@ -8,7 +8,7 @@ const { route } = require('./personroutes');
 router.post('/', async (req,res)=>{
     try{
       const data = req.body;
-      const newMenu = new menu(data);
+      const newMenu = new menuItem(data);
       const savedMenu = await newMenu.save();
      console.log("menu saved ");
      res.status(200).json(savedMenu);
