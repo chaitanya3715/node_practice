@@ -1,14 +1,14 @@
 const express = require('express')
 const app = express()
-const db = require('./db')
 const bodyParser = require('body-parser')
-require('dotenv').config();
-
-
+const dotenv=require('dotenv');
 const menu = require('./models/menuItem')
-
+dotenv.config();
+const db = require('./db')
 app.use(bodyParser.json());
 
+
+db();
 // GET METHOD
 app.get('/', (req, res) => {
   res.send('WELCOME CHAITANYA !!! HOW CAN I HELP YOU')
